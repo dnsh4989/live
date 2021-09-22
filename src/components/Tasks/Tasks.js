@@ -20,6 +20,7 @@ import { firebaseDB, fireStore } from "../../firebase";
 
 function Tasks() {
   useEffect(() => {
+    console.log("hey.!");
     let unsubscribe = onSnapshot(
       collection(fireStore, "tasks"),
       (querySnapshot) => {
