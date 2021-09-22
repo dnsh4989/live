@@ -16,12 +16,12 @@ import {
 
 import { collection, getDocs, doc, onSnapshot } from "firebase/firestore";
 
-import { firebaseDB, firestore } from "../../firebase";
+import { firebaseDB, fireStore } from "../../firebase";
 
 function Tasks() {
   useEffect(() => {
     let unsubscribe = onSnapshot(
-      collection(firestore, "tasks"),
+      collection(fireStore, "tasks"),
       (querySnapshot) => {
         let tasks = [];
         querySnapshot.forEach((doc) => {
